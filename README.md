@@ -1,6 +1,6 @@
 # BrainChip8
 
-This is a partly functional Brainfuck interpreter for running on a Chip8. It uses generate.py to insert the program as ASCII text into the assembly file before using [RustChip8](https://github.com/DavidSpickett/RustChip8) to assemble and run it. 
+This is a partly functional Brainfuck interpreter for running on a Chip8. It uses generate.py to insert the program as ASCII text into an assembly template before using [RustChip8](https://github.com/DavidSpickett/RustChip8) to assemble and run it. 
 
 ## Example
 
