@@ -40,15 +40,15 @@ program:
 
 ## Notes
 
-Input is not supported and the output comamnd ('.') only works for a single byte and immediatley ends the program.
+Input is not supported and the output command ('.') only works for a single byte and immediately ends the program.
 
 The '[' and ']' commands have no bounds on them when they look for the corresponding bracket. So if the program is malformed what the interpreter does is undefined. The Python script will check the length of the program and the characters it uses but doesn't check for matching brackets.
 
-Null bytes will cause the program to stop (branch to self). One of these is placed at the end of the program regardless of whether you include one directly. (well two but that's just because I don't have a '.byte')
+Null bytes will cause the program to stop (branch to self). One of these is placed at the end of the program regardless of whether you include one directly. (actually two but that's just because I don't have a '.byte')
 
 ## Memory Layout
 
-The Chip8 only has 1 12 bit address register I. We can load that directly with a fixed address and we can add a V register to it. This means that (putting aside repeatedley adding to I) we can only influence the bottom 8 bits at runtime. (also putting aside any kind of JIT style soloution)
+The Chip8 has 1 12 bit address register I. We can load that directly with a fixed address (fixed in the instruction encoding) and we can add a V register to it. This means that (putting aside repeatedly adding to I) we can only influence the bottom 8 bits at runtime. (also putting aside any kind of JIT style solution)
 
 To enable this the memory is laid out as follows:
 ```
